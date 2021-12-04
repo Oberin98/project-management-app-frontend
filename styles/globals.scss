@@ -1,0 +1,84 @@
+@import 'variables', 'mixins';
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font: inherit;
+	line-height: inherit;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+}
+
+html,
+body {
+	background-color: $white;
+	color: $blue-dark;
+	font-family: $base-font-family;
+}
+
+/* Resets */
+
+ol,
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	color: inherit;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: unset;
+	color: inherit;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	min-width: 0;
+	outline: none;
+	background-color: transparent;
+	font: inherit;
+	color: inherit;
+
+	&[type='search']::-ms-clear,
+	&[type='search']::-ms-reveal {
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	&[type='search']::-webkit-search-decoration,
+	&[type='search']::-webkit-search-cancel-button,
+	&[type='search']::-webkit-search-results-button,
+	&[type='search']::-webkit-search-results-decoration {
+		display: none;
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}

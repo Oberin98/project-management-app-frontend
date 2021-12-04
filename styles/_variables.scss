@@ -1,0 +1,16 @@
+/* Colors */
+
+$blue-dark: #161a3b;
+$blue-dark-ocean: #15193a;
+$blue-ocean: #6ba0fa;
+$blue-sky: #78dcbb;
+$white: #fefefe;
+
+/* Gradients */
+
+$ocean-to-sky-gradient: linear-gradient(to right, #{$blue-ocean}, #{$blue-sky});
+$dark-ocean-to-ocean-gradient: linear-gradient(to right, #{$blue-dark-ocean}, #{$blue-ocean});
+
+/* Fonts */
+
+$base-font-family: 'Helvetica', -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Helvetica Neue', sans-serif;
