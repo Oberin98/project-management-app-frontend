@@ -1,0 +1,8 @@
+@import 'variables', 'mixins';
+
+.toolbar {
+	width: 100%;
+	height: 56px;
+	padding: $spacing-2 $spacing-4;
+	background-color: darken($ocean-dark, 5%);
+}

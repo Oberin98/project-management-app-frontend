@@ -1,0 +1,45 @@
+@import 'variables', 'mixins';
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	flex: 0 0 auto;
+	margin-bottom: $spacing-15;
+	color: $white;
+	user-select: none;
+	cursor: default;
+
+	.logoIcon {
+		flex: 0 0 auto;
+		fill: currentColor;
+	}
+
+	.logoName {
+		flex: 1 1 auto;
+		padding: 0 $spacing-2;
+		font-weight: 400;
+		font-size: $spacing-4;
+		line-height: $spacing-5;
+	}
+}
+
+.navigation {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+
+	.button {
+		margin-bottom: $spacing-2;
+	}
+}
+
+.footer {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+}

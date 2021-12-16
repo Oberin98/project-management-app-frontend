@@ -1,0 +1,65 @@
+@import 'variables', 'mixins';
+
+.column {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-3;
+	border-radius: $spacing-1;
+	background-color: $white;
+	transition: box-shadow 300ms ease;
+
+	.content {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin-bottom: $spacing-3;
+		color: $ocean;
+
+		.heading {
+			flex: 1 1 auto;
+			padding-right: $spacing-4;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 24px;
+			color: currentColor;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.addButton {
+			opacity: 0;
+			transition: opacity 300ms ease;
+
+			svg {
+				fill: $ocean-dark;
+			}
+		}
+	}
+
+	&:hover {
+		.content {
+			.addButton {
+				opacity: 1;
+			}
+		}
+	}
+
+	.addInput {
+		width: 100%;
+		margin-bottom: $spacing-3;
+
+		input {
+			width: 100%;
+			padding: $spacing-2;
+			border-radius: $spacing-1;
+			background-color: $grey-light;
+			color: $ocean-dark;
+			font-size: 14px;
+
+			&::placeholder {
+				color: $grey;
+			}
+		}
+	}
+}

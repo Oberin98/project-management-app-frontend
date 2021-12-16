@@ -4,6 +4,11 @@
 	"rules": {
 		"prettier/prettier": true,
 		"selector-pseudo-class-no-unknown": true,
-		"property-no-vendor-prefix": null
+		"property-no-vendor-prefix": null,
+		"at-rule-no-unknown": null,
+		"declaration-empty-line-before": null,
+		"selector-class-pattern": null,
+		"color-function-notation": null,
+		"selector-id-pattern": null
 	}
 }

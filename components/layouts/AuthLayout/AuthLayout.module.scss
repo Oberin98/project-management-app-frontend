@@ -1,0 +1,10 @@
+@import 'variables', 'mixins';
+
+.layout {
+	@include flex();
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: $ocean-to-sky-gradient;
+}

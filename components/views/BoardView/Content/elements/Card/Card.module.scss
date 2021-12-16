@@ -1,0 +1,61 @@
+@import 'variables', 'mixins';
+
+.card {
+	@include flex(center, flex-start);
+	gap: $spacing-1;
+	padding: $spacing-2;
+	border: 0.5px solid $grey-light;
+	border-radius: $spacing-1;
+	box-shadow: $shadow-light;
+	background-color: $white;
+	transition: box-shadow 300ms ease;
+
+	.input {
+		flex: 1 1 auto;
+		height: $spacing-5;
+		font-size: 14px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.deleteButton,
+	.handleButton {
+		width: $spacing-5;
+		height: $spacing-5;
+		flex: 0 0 auto;
+		opacity: 0;
+		fill: $grey;
+		transition: opacity 300ms ease, fill 300ms ease;
+
+		span {
+			width: $spacing-5;
+			height: $spacing-5;
+		}
+	}
+
+	&:hover {
+		box-shadow: $shadow-medium;
+
+		.deleteButton,
+		.handleButton {
+			opacity: 1;
+		}
+	}
+
+	.deleteButton:hover {
+		fill: $danger;
+	}
+
+	.handleButton:hover {
+		fill: $ocean-light;
+	}
+
+	&.grab .handleButton {
+		cursor: grab;
+	}
+
+	&.grabbing .handleButton {
+		cursor: grabbing;
+	}
+}

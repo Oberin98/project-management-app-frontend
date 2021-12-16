@@ -1,0 +1,19 @@
+@import 'variables', 'mixins';
+
+.content {
+	display: flex;
+	flex-direction: column;
+
+	.toolbar {
+		margin-bottom: $spacing-8;
+	}
+
+	.column {
+		flex: 1 1 230px;
+		max-width: 280px;
+
+		.card:not(:last-of-type) {
+			margin-bottom: $spacing-3;
+		}
+	}
+}
