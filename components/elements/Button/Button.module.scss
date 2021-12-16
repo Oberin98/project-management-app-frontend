@@ -1,0 +1,47 @@
+@import 'variables', 'mixins';
+
+.button {
+	display: inline-flex;
+	align-items: center;
+
+	.icon {
+		flex: 0 0 auto;
+	}
+
+	.content {
+		flex: 1 1 auto;
+	}
+}
+
+.sidebar {
+	padding: $spacing-1 $spacing-2;
+	border-radius: $spacing-1;
+	color: $grey;
+	transition: background-color 300ms ease, color 300ms ease;
+
+	.icon {
+		width: $spacing-6;
+		height: $spacing-6;
+		fill: currentColor;
+	}
+
+	.content {
+		padding: 0 $spacing-2;
+		color: inherit;
+		font-size: 14px;
+		line-height: 24px;
+		text-align: start;
+	}
+
+	&:hover:not([disabled]),
+	&:focus:not([disabled]),
+	&.hovered {
+		color: $grey-light;
+		background-color: rgb(255, 255, 255 / 10%);
+	}
+
+	&[disabled] {
+		color: $grey-dark;
+		cursor: not-allowed;
+	}
+}

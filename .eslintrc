@@ -1,11 +1,7 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
-    "next/core-web-vitals",
     "eslint:recommended",
     "airbnb",
     "airbnb/hooks",
@@ -20,6 +16,7 @@
   "env": {
     "es6": true,
     "browser": true,
+    "jest": true,
     "node": true
   },
   "settings": {
@@ -35,6 +32,8 @@
       "error",
       "ignorePackages",
       {
+        "js": "never",
+        "jsx": "never",
         "ts": "never",
         "tsx": "never"
       }
@@ -42,36 +41,20 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "external",
-          "builtin",
-          "internal",
-          [
-            "parent",
-            "sibling"
-          ],
-          "index"
-        ],
+        "groups": ["external", "builtin", "internal", ["parent", "sibling"], "index"],
         "newlines-between": "always",
         "alphabetize": {
           "order": "asc"
         }
       }
     ],
+    "import/prefer-default-export": 0,
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": 0,
     "prettier/prettier": "error",
     "react/react-in-jsx-scope": 0,
     "react/button-has-type": 0,
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".ts",
-          ".tsx"
-        ]
-      }
-    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "react/display-name": 0,
     "react/prop-types": 0,
     "jsx-a11y/anchor-is-valid": 0,
@@ -79,7 +62,6 @@
     "react/jsx-props-no-spreading": 0,
     "react/no-array-index-key": 0,
     "react/require-default-props": 0,
-    "react/function-component-definition": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
@@ -87,10 +69,7 @@
     "@typescript-eslint/member-delimiter-style": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error"
-    ],
+    "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/no-unused-vars": [
       2,
       {
@@ -101,11 +80,10 @@
     "no-console": [
       2,
       {
-        "allow": [
-          "warn",
-          "error"
-        ]
+        "allow": ["warn", "error"]
       }
-    ]
+    ],
+    "no-use-before-define": "off",
+    "react/function-component-definition": 0
   }
 }

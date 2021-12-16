@@ -1,0 +1,12 @@
+@import 'variables', 'mixins';
+
+.columns {
+	@include flex(flex-start, flex-start);
+	flex-wrap: nowrap;
+	width: 100%;
+	height: 100%;
+	padding: $spacing-8;
+	gap: $spacing-8;
+	overflow-y: hidden;
+	overflow-x: auto;
+}

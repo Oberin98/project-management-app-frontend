@@ -1,16 +1,45 @@
 /* Colors */
 
-$blue-dark: #161a3b;
-$blue-dark-ocean: #15193a;
-$blue-ocean: #6ba0fa;
+$ocean-dark: #15193a;
+$ocean: lighten(#15193a, 5%);
+$ocean-light: lighten(#15193a, 15%);
+$grey-dark: #6f6f88;
+$grey: #b4b4c9;
+$grey-light: #eaeaf8;
 $blue-sky: #78dcbb;
 $white: #fefefe;
+$danger: #b7241b;
+$success: #95d800;
 
 /* Gradients */
 
-$ocean-to-sky-gradient: linear-gradient(to right, #{$blue-ocean}, #{$blue-sky});
-$dark-ocean-to-ocean-gradient: linear-gradient(to right, #{$blue-dark-ocean}, #{$blue-ocean});
+$ocean-to-sky-gradient: linear-gradient(to right, #{$ocean}, #{$blue-sky});
+$dark-ocean-to-ocean-gradient: linear-gradient(to right, #{$ocean-dark}, #{$ocean});
 
 /* Fonts */
 
 $base-font-family: 'Helvetica', -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Helvetica Neue', sans-serif;
+
+/* Spacings */
+
+$base-spacing: 4px;
+$spacing-1: $base-spacing * 1;
+$spacing-2: $base-spacing * 2;
+$spacing-3: $base-spacing * 3;
+$spacing-4: $base-spacing * 4;
+$spacing-5: $base-spacing * 5;
+$spacing-6: $base-spacing * 6;
+$spacing-7: $base-spacing * 7;
+$spacing-8: $base-spacing * 8;
+$spacing-9: $base-spacing * 9;
+$spacing-10: $base-spacing * 10;
+$spacing-11: $base-spacing * 11;
+$spacing-12: $base-spacing * 12;
+$spacing-13: $base-spacing * 13;
+$spacing-14: $base-spacing * 14;
+$spacing-15: $base-spacing * 15;
+
+/* Shadows */
+
+$shadow-light: rgb(0 0 0 / 16%) 0 1px 4px;
+$shadow-medium: rgba(0 0 0 / 24%) 0 3px 8px;
